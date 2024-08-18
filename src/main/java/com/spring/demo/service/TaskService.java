@@ -72,4 +72,12 @@ public class TaskService {
 	 public List<Task> getAllTasks() {
 	        return tr.findAll();
 	    }
+	 
+	 public Optional<Task> getTaskById(Long id) {
+	        return tr.findById(id);
+	    }
+	 
+	 public void deleteTask(Long id) {
+	        tr.deleteById(id);
+	    }
 }
