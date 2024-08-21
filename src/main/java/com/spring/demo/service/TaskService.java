@@ -80,4 +80,12 @@ public class TaskService {
 	 public void deleteTask(Long id) {
 	        tr.deleteById(id);
 	    }
+	 
+	 public Task findById(Long taskId) {
+	        return tr.findById(taskId).orElse(null);
+	    }
+
+	    public void save(Task task) {
+	        tr.save(task);
+	    }
 }
